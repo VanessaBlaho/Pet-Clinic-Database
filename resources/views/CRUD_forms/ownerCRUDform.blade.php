@@ -10,7 +10,7 @@
 <body>
 
 @include('common.success_message')
-@include('common.error_message')
+@include('common.error_messages')
     
 @if ($owner->id)
         <h1>Admin: Edit</h1>
@@ -60,7 +60,7 @@
     <a href="/animals">Animals</a>
     <a href="/search">Search</a>
     <a href="/ownerform/create">Create Owner</a>
-    <a href="">Create Animal</a>
+    <a href="/animalform/create">Create Animal</a>
     
 </footer>
 

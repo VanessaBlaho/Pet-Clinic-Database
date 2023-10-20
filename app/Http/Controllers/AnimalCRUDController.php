@@ -50,6 +50,7 @@ class AnimalCRUDController extends Controller
         $animal->save();
 
         session()->flash('success_message', 'Yaaay you did it!!! Successfully created!');
+        session()->flash('error_message', 'Failed. Try again :( ');
 
         return redirect()->route('animals.edit', $animal->id);
     }

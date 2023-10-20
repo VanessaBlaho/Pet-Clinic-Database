@@ -9,7 +9,7 @@
 <body>
 
 @include('common.success_message')
-    @include('common.error_message')
+    @include('common.error_messages')
     
 @if ($animal->id)
         <h1>Admin: Edit Animal</h1>
@@ -56,6 +56,16 @@
         <button>Save</button>
 </form>
 
+<footer class="footer">
+    
+    <a href="/home">Home</a>
+    <a href="/owners">Owners</a>
+    <a href="/animals">Animals</a>
+    <a href="/search">Search</a>
+    <a href="/ownerform/create">Create Owner</a>
+    <a href="/animalform/create">Create Animal</a>
+    
+</footer>
 
 
 </body>
