@@ -3,6 +3,7 @@
 use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
