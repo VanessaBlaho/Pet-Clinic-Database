@@ -21,7 +21,7 @@ class OwnerCRUDController extends Controller
     public function create()
     {
         $owner = new Owner();
-        return view('CRUD_forms.ownerCRUDform', compact('owners'));
+        return view('CRUD_forms.ownerCRUDform', compact('owner'));
     }
 
     /**
@@ -29,7 +29,27 @@ class OwnerCRUDController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validation
+        $this->validate($request, [
+            'first_name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required'
+        ]);
+
+        $owner = new Owner();
+        $owner->first_name = $request->input('first_name');
+        $owner->surname = $request->input('surname');
+        $owner->email = $request->input('email');
+        $owner->phone = $request->input('phone');
+        $owner->address = $request->input('address');
+
+        $owner->save();
+
+        session()->flash('success_message', 'Yaaay you did it!!! Successfully created!');
+
+        return redirect()->route('owners.edit', $owner->id);
     }
 
     /**
@@ -45,7 +65,8 @@ class OwnerCRUDController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        return view('CRUD_forms.ownerCRUDform', compact('owner'));
     }
 
     /**
@@ -53,7 +74,27 @@ class OwnerCRUDController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //validation
+        $this->validate($request, [
+            'first_name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required'
+        ]);
+
+        $owner = Owner::findOrFail($id);
+        $owner->first_name = $request->input('first_name');
+        $owner->surname = $request->input('surname');
+        $owner->email = $request->input('email');
+        $owner->phone = $request->input('phone');
+        $owner->address = $request->input('address');
+
+        $owner->update();
+
+        session()->flash('success_message', 'Yaaay you did it!!! Successfully updated!');
+
+        return redirect()->route('owners.edit', $owner->id);
     }
 
     /**

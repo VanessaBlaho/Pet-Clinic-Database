@@ -7,8 +7,14 @@
     <title>Admin</title>
 </head>
 <body>
+
+@include('common.success_message')
     
-<h1>Admin: Create</h1>
+@if ($owner->id)
+        <h1>Admin: Edit</h1>
+    @else
+        <h1>Admin: Create</h1>
+    @endif
 
 
 @if($owner->id)
@@ -40,6 +46,7 @@
         <label for="address">Address</label>
         <br>
         <input type="text" name="address" id="" value="{{ old('address', $owner->address)}}">
+        <br>
         <br>
         <button>Save</button>
 </form>
