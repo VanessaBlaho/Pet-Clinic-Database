@@ -28,7 +28,7 @@ Route::get('/owners', [OwnerController::class, 'index']);
 
 Route::get('/home', [IndexController::class, 'index']);
 
-Route::get('/animals', [AnimalController::class, 'detail']);
+
 
 Route::get('/ownerform/create', [OwnerCRUDController::class, 'create'])->name('owners.create');
 Route::post('/ownerform', [OwnerCRUDController::class, 'store'])->name('owners.store');
