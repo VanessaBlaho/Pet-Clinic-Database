@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Animal;
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +23,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/animals', [Animal::class, 'detail']);
+Route::get('/animals', [AnimalController::class, 'detail']);
