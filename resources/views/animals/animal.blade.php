@@ -27,7 +27,7 @@
             <td>{{ $animal->breed }}</td>
             <td>{{ $animal->age }}</td>
             <td>{{ $animal->weight }}</td>
-            <td> <img src="/images/pets/ {{$animal->path}}" alt="{{ $animal->name }}"></td>
+            <td><img src="/images/pets/{{$animal->image->path}}" alt="{{ $animal->name }}" style="width:50px;height:50px;"></td>
         </tr>
             
         @endforeach
