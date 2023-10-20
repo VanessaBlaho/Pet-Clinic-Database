@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+Route::get('/home', [IndexController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
