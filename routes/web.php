@@ -45,3 +45,6 @@ Route::post('/animalform', [AnimalCRUDController::class, 'store'])->name('animal
 
 Route::get('/animalform/{id}/edit', [AnimalCRUDController::class, 'edit'])->name('animals.edit');
 Route::put('/animalform/{id}', [AnimalCRUDController::class, 'update'])->name('animals.update');
+
+// animal route
+// Route::get('animals')

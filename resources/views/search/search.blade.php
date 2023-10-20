@@ -54,7 +54,8 @@
         <p>No results found</p>
     @endif
 
-<footer class="footer">
+
+    <footer class="footer">
     
     <a href="/home">Home</a>
     <a href="/owners">Owners</a>
@@ -64,6 +65,7 @@
     <a href="/animalform/create">Create Animal</a>
     
 </footer>
-     
+
 </body>
+
 </html>
