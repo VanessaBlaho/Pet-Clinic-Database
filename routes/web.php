@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,7 @@ Route::get('/owners', [OwnerController::class, 'index']);
 
 
 Route::get('/home', [IndexController::class, 'index']);
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/search', [SearchController::class, 'search']);
 
-
-Route::get('/animals', [AnimalController::class, 'detail']);
+Route::get('/animals', [AnimalController::class, 'index']);

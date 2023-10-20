@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\AnimalController;
+use App\Models\Animal;
+
 
 class IndexController extends Controller
 {
@@ -16,13 +19,14 @@ class IndexController extends Controller
             'animals.id',
             'animals.name',
             'animals.breed',
+            'animals.species',
             'animals.age',
             'animals.weight',
             'images.path',
             'owners.first_name',
             'owners.surname'
         )
-        ->take(10) // Retrieve 10 random records
+        ->take(12) // Retrieve 12 random records
         ->get();
 
     return view('index.index', ['animals' => $result]);
