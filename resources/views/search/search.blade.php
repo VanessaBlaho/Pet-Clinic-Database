@@ -16,13 +16,18 @@
         <button>Search</button>
     </form>
 
-     <ul>
-        <?php foreach ($results as $movie) : ?>
+
+    <ul>
+        <?php foreach ($results as $result_item) : ?>
             <li>
-                <?= $movie->name ?>
-                (<?= $movie->year ?>)
+                {{-- {{route('animal')}} --}}
+                <a href="">
+                <?= $result_item->name ?> (Breed: {{$result_item->breed}})
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>
+
+     
 </body>
 </html>

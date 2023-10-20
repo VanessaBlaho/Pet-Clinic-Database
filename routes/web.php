@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Animal;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 
 
 Route::get('/animals', [Animal::class, 'detail']);
+
+
+Route::get('/search', [SearchController::class, 'search']);
+Route::get('/animals/{animal_id}', [Animal::class, 'detail'])->whereNumber('id')->name('animal.index');
