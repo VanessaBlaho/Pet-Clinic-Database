@@ -11,7 +11,7 @@ class OwnerController extends Controller
     {
       
             $owners = Owner::all(); 
-           
+            // $owners = Owner::paginate(15); 
             return view('owners.index', compact('owners'));
       
     }
