@@ -4,6 +4,7 @@ use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\OwnerCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,9 @@ Route::get('/owners',[OwnerController::class,'index']);
 Route::get('/home', [IndexController::class, 'index']);
 
 Route::get('/animals', [AnimalController::class, 'detail']);
+
+Route::get('/ownerform/create', [OwnerCRUDController::class, 'create'])->name('owners.create');
+Route::post('/ownerform', [OwnerCRUDController::class, 'store'])->name('owners.store');
+
+Route::get('/ownerform/{id}/edit', [OwnerCRUDController::class, 'edit'])->name('owners.edit');
+Route::put('/ownerform/{id}', [OwnerCRUDController::class, 'update'])->name('owners.update');
