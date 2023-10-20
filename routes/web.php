@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\Animal;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\OwnerCRUDController;
 
@@ -20,8 +22,7 @@ use App\Http\Controllers\OwnerCRUDController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/owners',[OwnerController::class,'index']);
-
+Route::get('/owners', [OwnerController::class, 'index']);
 
 
 Route::get('/home', [IndexController::class, 'index']);
@@ -33,3 +34,6 @@ Route::post('/ownerform', [OwnerCRUDController::class, 'store'])->name('owners.s
 
 Route::get('/ownerform/{id}/edit', [OwnerCRUDController::class, 'edit'])->name('owners.edit');
 Route::put('/ownerform/{id}', [OwnerCRUDController::class, 'update'])->name('owners.update');
+Route::get('/search', [SearchController::class, 'search']);
+
+Route::get('/animals', [AnimalController::class, 'index']);
