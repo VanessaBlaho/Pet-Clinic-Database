@@ -9,6 +9,7 @@
 <body>
 
 @include('common.success_message')
+@include('common.error_message')
     
 @if ($owner->id)
         <h1>Admin: Edit</h1>

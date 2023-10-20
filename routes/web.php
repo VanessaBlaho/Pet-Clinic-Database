@@ -7,6 +7,7 @@ use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\OwnerCRUDController;
+use App\Http\Controllers\AnimalCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,10 @@ Route::put('/ownerform/{id}', [OwnerCRUDController::class, 'update'])->name('own
 Route::get('/search', [SearchController::class, 'search']);
 
 Route::get('/animals', [AnimalController::class, 'index']);
+
+///animal form
+Route::get('/animalform/create', [AnimalCRUDController::class, 'create'])->name('animals.create');
+Route::post('/animalform', [AnimalCRUDController::class, 'store'])->name('animals.store');
+
+Route::get('/animalform/{id}/edit', [AnimalCRUDController::class, 'edit'])->name('animals.edit');
+Route::put('/animalform/{id}', [AnimalCRUDController::class, 'update'])->name('animals.update');
