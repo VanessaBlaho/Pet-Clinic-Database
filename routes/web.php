@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Animal;
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OwnerController;
 
@@ -28,4 +28,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/animals', [Animal::class, 'detail']);
+Route::get('/animals', [AnimalController::class, 'detail']);
