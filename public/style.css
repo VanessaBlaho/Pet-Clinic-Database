@@ -86,3 +86,17 @@ h2 {
     margin: 0; /* Reset margin to prevent spacing around <p> elements */
     
 }
+
+.footer {
+    color: black;
+    background: red;
+}
+
+.footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
