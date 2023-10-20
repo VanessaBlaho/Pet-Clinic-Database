@@ -18,7 +18,7 @@ use App\Http\Controllers\OwnerController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/index',[OwnerController::class,'index'])->name('owners.index');
+Route::get('/owners',[OwnerController::class,'index']);
 
 
 
