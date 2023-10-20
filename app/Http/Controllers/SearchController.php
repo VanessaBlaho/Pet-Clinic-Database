@@ -28,7 +28,6 @@ class SearchController extends Controller
                 ->get();
         }
 
-        dump($search_term);
         return view('search.search', [
             'search_term' => $search_term,
             'results_animal' => $results_animal ?? [],
