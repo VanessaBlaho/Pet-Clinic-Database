@@ -42,6 +42,7 @@
     <a href="/home">Home</a>
     <a href="/owners">Owners</a>
     <a href="/animals">Animals</a>
+    <a href="/search">Search</a>
     <a href="/ownerform/create">Create Owner</a>
     <a href="">Create Animal</a>
     

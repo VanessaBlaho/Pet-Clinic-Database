@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Admin</title>
 </head>
 <body>
@@ -50,8 +51,17 @@
         <br>
         <button>Save</button>
 </form>
-
-
+<br>
+<footer class="footer">
+    
+    <a href="/home">Home</a>
+    <a href="/owners">Owners</a>
+    <a href="/animals">Animals</a>
+    <a href="/search">Search</a>
+    <a href="/ownerform/create">Create Owner</a>
+    <a href="">Create Animal</a>
+    
+</footer>
 
 </body>
 </html>
