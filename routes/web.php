@@ -23,4 +23,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/animals', [AnimalController::class, 'detail']);
+Route::get('/animals', [AnimalController::class, 'index']);
