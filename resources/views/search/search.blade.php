@@ -17,16 +17,42 @@
     </form>
 
 
+    <h3>Search results by pet name:</h3>
+    
+        @if (count($results_animal) > 0)
+        <ul>
+            @foreach ($results_animal as $result_item)
+                <li>
+                    {{-- {{route('animal')}} --}}
+                    <a href="">
+                        {{ $result_item->name }} (Breed: {{ $result_item->breed }})
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+        @else
+            <p>No results found</p>
+        @endif
+    
+
+
+    <h3>Search results by owner name:</h3>
+
+    @if (count($results_owner) > 0)
     <ul>
-        <?php foreach ($results as $result_item) : ?>
+        @foreach ($results_owner as $result_item)
             <li>
                 {{-- {{route('animal')}} --}}
                 <a href="">
-                <?= $result_item->name ?> (Breed: {{$result_item->breed}})
+                    {{ $result_item->first_name . " " . $result_item->surname }}
                 </a>
             </li>
-        <?php endforeach; ?>
+        @endforeach
     </ul>
+    @else
+        <p>No results found</p>
+    @endif
+
 
      
 </body>
