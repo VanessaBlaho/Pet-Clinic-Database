@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Animal;
+use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/home', [IndexController::class, 'index']);
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::get('/animals', [Animal::class, 'detail']);
