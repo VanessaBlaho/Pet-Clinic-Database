@@ -32,5 +32,10 @@ class IndexController extends Controller
     return view('index.index', ['animals' => $result]);
 }
 
+    function get_current_year()
+{
+    return date('Y');
+}
+
 }
 
