@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\Animal;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +22,6 @@ Route::get('/', function () {
 
 
 
-
-
-
-
-
-
-
 Route::get('/search', [SearchController::class, 'search']);
+
+Route::get('/animals', [Animal::class, 'detail']);
