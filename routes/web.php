@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Animal;
-use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OwnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/owners',[OwnerController::class,'index']);
+
+
+
+Route::get('/home', [IndexController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/animals', [Animal::class, 'detail']);
-
-
-Route::get('/search', [SearchController::class, 'search']);
-Route::get('/animals/{animal_id}', [Animal::class, 'detail'])->whereNumber('id')->name('animal.index');
+Route::get('/animals', [AnimalController::class, 'detail']);
